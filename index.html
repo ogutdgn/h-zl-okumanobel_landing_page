@@ -32,6 +32,9 @@
   <link
     href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
 
   <!-- 
     - preload images
@@ -97,20 +100,10 @@
 
       </nav>
 
-      <!-- <div class="header-actions">
-
-        <button class="header-action-btn" aria-label="toggle search" title="Search">
-          <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
-        </button>
-
-        <button class="header-action-btn" aria-label="cart" title="Cart">
-          <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
-
-          <span class="btn-badge">0</span>
-        </button>
+      <div class="header-actions">
 
         <a href="#" class="btn has-before">
-          <span class="span">Try for free</span>
+          <span class="span">Kayıt / Giriş</span>
 
           <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
         </a>
@@ -119,14 +112,61 @@
           <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
         </button>
 
-      </div> -->
+      </div>
 
       <div class="overlay" data-nav-toggler data-overlay></div>
 
     </div>
   </header>
+  
+  <!-- Kayıt / Giriş Pop-up -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <ul class="tab-group">
+      <li class="tab active"><a href="#signup">Kayıt Ol</a></li>
+      <li class="tab"><a href="#login">Giriş Yap</a></li>
+    </ul>
 
-
+    <div class="tab-content">
+      <div id="signup" class="tab-pane active">
+        <form action="#" id="signupForm">
+          <div class="form-group">
+            <label for="name">Ad Soyad:</label>
+            <input type="text" id="name" name="name" placeholder="Adınızı ve soyadınızı girin" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Email adresinizi girin" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Şifre Belirleyin:</label>
+            <input type="password" id="password" name="password" placeholder="Şifrenizi girin" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[?!@#$%^&*]).{8,}" title="Şifreniz en az 8 karakter uzunluğunda olmalı, en az bir rakam, bir büyük harf, bir küçük harf ve bir özel karakter (!?@# vb.) içermelidir." />
+          </div>
+          <div class="form-group">
+            <label for="password">Şifrenizi Tekrardan Girin:</label>
+            <input type="password" id="password" name="password" placeholder="Şifrenizi tekrardan girin" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[?!@#$%^&*]).{8,}" title="Şifreniz en az 8 karakter uzunluğunda olmalı, en az bir rakam, bir büyük harf, bir küçük harf ve bir özel karakter (!?@# vb.) içermelidir." />
+          </div>
+          <span class="error-message"></span>
+          <button type="submit" class="button">Kayıt Ol</button>
+        </form>
+      </div>
+      <div id="login" class="tab-pane">
+        <form action="#" id="loginForm">
+          <div class="form-group">
+            <label for="login-email">Email:</label>
+            <input type="email" id="login-email" name="email" placeholder="Email adresinizi girin" required />
+          </div>
+          <div class="form-group">
+            <label for="login-password">Şifre:</label>
+            <input type="password" id="login-password" name="password" placeholder="Şifrenizi girin" required />
+          </div>
+          <button type="submit" class="button">Giriş Yap</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 

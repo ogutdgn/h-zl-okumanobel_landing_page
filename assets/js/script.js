@@ -1,11 +1,5 @@
 'use strict';
 
-
-
-/**
- * add event on element
- */
-
 const addEventOnElem = function (elem, type, callback) {
   if (elem.length > 1) {
     for (let i = 0; i < elem.length; i++) {
@@ -16,7 +10,67 @@ const addEventOnElem = function (elem, type, callback) {
   }
 }
 
+// Pop-up açma ve kapatma işlemleri
+var modal = document.getElementById('loginModal');
+var btn = document.querySelector('.btn.has-before'); // Kayıt / Giriş butonu
+var closeBtn = document.querySelector('.close-btn');
 
+btn.onclick = function() {
+  modal.style.display = 'block';
+}
+
+closeBtn.onclick = function() {
+  modal.style.display = 'none';
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = 'none';
+  }
+}
+
+// Sekmeler arası geçiş
+var tabs = document.querySelectorAll('.tab');
+var panes = document.querySelectorAll('.tab-pane');
+
+tabs.forEach((tab, index) => {
+  tab.addEventListener('click', function() {
+    tabs.forEach(t => t.classList.remove('active'));
+    panes.forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    panes[index].classList.add('active');
+  });
+});
+
+document.getElementById('signupForm').addEventListener('submit', function(event) {
+  var password = document.getElementById('password').value;
+  var confirmPassword = document.getElementsByName('password')[1].value; // İkinci şifre alanına erişim
+
+  if (password !== confirmPassword) {
+    Toastify({
+      text: "Girdiğiniz şifreler eşleşmiyor. Lütfen şifrelerinizi kontrol edin.",
+      duration: 3000,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: 'right', // `left`, `center` or `right`
+      backgroundColor: "red",
+      onClick: function(){} // Callback function after click
+  }).showToast();
+    event.preventDefault(); // Form gönderimini engelle
+  }
+});
+
+function showToast() {
+  Toastify({
+      text: "This is a toast",
+      duration: 3000,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: 'right', // `left`, `center` or `right`
+      backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+      onClick: function(){} // Callback function after click
+  }).showToast();
+}
 
 /**
  * navbar toggle
