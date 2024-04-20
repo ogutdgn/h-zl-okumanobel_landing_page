@@ -134,6 +134,7 @@
   color: #000;
   text-align: center;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .tab-group .active a {
@@ -153,9 +154,10 @@
   margin-bottom: 15px;
 }
 
-.label {
+.form-group label {
   display: block;
-  margin-bottom: 5px;
+  color: black;
+  font-weight: bold;
 }
 
 
@@ -184,6 +186,38 @@
 .button:hover {
   background-color: #f35970;
 }
+
+.buy-btn{
+  background-color: #ff9500;
+  color: white;
+  padding: 5px 15px 5px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.buy-btn:hover {
+  background-color: #ffa629;
+}
+
+
+
+.logo-instagram{
+  /* color: red; */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-image: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d, #f56040, #f77737, #fcaf45, #ffdc80);
+}
+
+
+.logo-youtube{
+  /* color: red; */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: red;
+}
+
 
 
 :root {
@@ -567,10 +601,11 @@ body {
 .navbar-link {
   padding-block: 8px;
   font-weight: var(--fw-500);
+  font-size: 20px;
   transition: var(--transition-1);
 }
 
-.navbar-link:is(:hover, :focus) { color: var(--kappel); }
+.navbar-link:is(:hover, :focus) { color: #F37010; }
 
 .overlay {
   position: fixed;
@@ -1083,6 +1118,16 @@ body {
   gap: 25px;
 }
 
+.social-list li{
+  color: #3C1855;
+}
+
+.social-list li:hover{
+  opacity: 0.7;
+}
+
+
+
 .social-link { font-size: 20px; }
 
 .footer-bottom {
@@ -1550,8 +1595,6 @@ body {
     right: 120px;
     z-index: 1;
   }
-
-
 
   /**
    * BLOG
