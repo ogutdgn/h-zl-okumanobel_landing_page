@@ -220,6 +220,8 @@
 
 
 
+
+
 :root {
 
   /**
@@ -538,7 +540,7 @@ body {
 }
 
 .header-action-btn,
-.nav-close-btn {
+.nav-menu-btn {
   position: relative;
   color: var(--eerie-black-1);
   font-size: 24px;
@@ -582,14 +584,14 @@ body {
   border-block-end: 1px solid var(--platinum);
 }
 
-.nav-close-btn {
+.nav-menu-btn {
   background-color: var(--white);
   box-shadow: var(--shadow-2);
   padding: 8px;
   border-radius: var(--radius-circle);
 }
 
-.nav-close-btn:is(:hover, :focus) {
+.nav-menu-btn:is(:hover, :focus) {
   background-color: var(--kappel);
   color: var(--white);
 }
@@ -1262,6 +1264,19 @@ body {
  * responsive for large than 768px screen
  */
 
+
+/* Media Query for devices less than 768px */
+@media (max-width: 768px) {
+  .logo1{
+    margin-left: auto;
+  }
+
+  .social-list {
+      display: none; /* Küçük ekranlarda sosyal medya ikonlarını gizler */
+  }
+}
+
+
 @media (min-width: 768px) {
 
   /**
@@ -1278,6 +1293,14 @@ body {
     --fs-2: 3.8rem;
 
   }
+
+  .nav-menu-btn {
+    display: none;
+  }
+
+  /* .social-list{
+    display: none;
+  } */
 
 
 
