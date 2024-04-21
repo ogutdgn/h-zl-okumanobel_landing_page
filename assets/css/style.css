@@ -1271,7 +1271,7 @@ body {
     margin-left: auto;
   }
 
-  .social-list {
+  #social_list_navbar {
       display: none; /* Küçük ekranlarda sosyal medya ikonlarını gizler */
   }
 }
