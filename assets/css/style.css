@@ -579,13 +579,13 @@ body {
   gap: 15px;
 }
 
-.wrapper {
+.contact-wrap {
   display: flex;
   flex-direction: column;
   margin-top: 10px;
 }
 
-.wrapper a {
+.contact-wrap a {
   color: white;
   text-decoration: underline;
 }
