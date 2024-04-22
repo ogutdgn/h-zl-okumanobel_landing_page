@@ -246,6 +246,19 @@
 }
 
 
+/* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* */
+.disabled-card {
+  filter: grayscale(50%) opacity(0.5); /* Gri tonlama ve yarı saydam yapar */
+  pointer-events: none; /* Fare ile etkileşimi engeller */
+}
+
+.disabled-button {
+  cursor: not-allowed; /* İmleci 'yasak' simgesi yapar */
+  background-color: #ccc; /* Arka planı gri yapar */
+  color: #666; /* Yazı rengini koyu gri yapar */
+  border: 1px solid #aaa; /* Çerçeve rengini ayarlar */
+}
+/* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* */
 
 
 
@@ -852,6 +865,8 @@ body {
   --ionicon-stroke-width: 50px;
 }
 
+
+
 .course-card .card-content { padding: 25px; }
 
 .course-card .badge {
@@ -872,6 +887,8 @@ body {
 }
 
 .course-card .card-title:is(:hover, :focus) { color: var(--kappel); }
+
+
 
 .course-card :is(.wrapper, .rating-wrapper, .card-meta-list, .card-meta-item) {
   display: flex;
