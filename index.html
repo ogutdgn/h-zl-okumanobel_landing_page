@@ -120,55 +120,7 @@
     </div>
   </header>
   
-  <!-- Kayıt / Giriş Pop-up -->
-<div id="loginModal" class="modal">
-  <div class="modal-content">
-    <span class="close-btn">&times;</span>
-    <ul class="tab-group">
-      <li class="tab active"><a href="#signup">Kayıt Ol</a></li>
-      <li class="tab"><a href="#login">Giriş Yap</a></li>
-    </ul>
-
-    <div class="tab-content">
-      <div id="signup" class="tab-pane active">
-        <form action="#" id="signupForm">
-          <div class="form-group">
-            <label for="name">Ad Soyad:</label>
-            <input type="text" id="name" name="name" placeholder="Adınızı ve soyadınızı girin" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Email adresinizi girin" required />
-          </div>
-          <div class="form-group">
-            <label for="password">Şifre Belirleyin:</label>
-            <input type="password" id="password" name="password" placeholder="Şifrenizi girin" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[?!@#$%^&*]).{8,}" title="Şifreniz en az 8 karakter uzunluğunda olmalı, en az bir rakam, bir büyük harf, bir küçük harf ve bir özel karakter (!?@# vb.) içermelidir." />
-          </div>
-          <div class="form-group">
-            <label for="password">Şifrenizi Tekrardan Girin:</label>
-            <input type="password" id="password" name="password" placeholder="Şifrenizi tekrardan girin" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[?!@#$%^&*]).{8,}" title="Şifreniz en az 8 karakter uzunluğunda olmalı, en az bir rakam, bir büyük harf, bir küçük harf ve bir özel karakter (!?@# vb.) içermelidir." />
-          </div>
-          <span class="error-message"></span>
-          <button type="submit" class="button">Kayıt Ol</button>
-        </form>
-      </div>
-      <div id="login" class="tab-pane">
-        <form action="#" id="loginForm">
-          <div class="form-group">
-            <label for="login-email">Email:</label>
-            <input type="email" id="login-email" name="email" placeholder="Email adresinizi girin" required />
-          </div>
-          <div class="form-group">
-            <label for="login-password">Şifre:</label>
-            <input type="password" id="login-password" name="password" placeholder="Şifrenizi girin" required />
-          </div>
-          <button type="submit" class="button">Giriş Yap</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-
+  
 
 
   <main>
@@ -701,7 +653,18 @@
 
           <h2 class="h2 section-title">Güncel Bloglarımız</h2>
 
-          <ul class="grid-list">
+          <ul class="grid-list" id="ul-blogs"></ul>
+          <!-- Blog Popup -->
+          <div id="blogPopup" class="modal">
+            <div class="modal-content">
+              <span class="close-btn">&times;</span>
+              <img id="blogImage" src="" alt="Blog Image" class="popup-image">
+              <h1 id="blogTitle">Blog Başlığı</h1>
+              <p id="blogContent">Blog içeriği buraya gelecek.</p>
+            </div>
+          </div>
+
+          <!-- <ul class="grid-list">
 
             <li>
               <div class="blog-card">
@@ -717,7 +680,6 @@
                     <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                   </a>
 
-                  <!-- <a href="#" class="card-subtitle">Online</a> -->
 
                   <h3 class="h3">
                     <a href="#" class="card-title">Neden Hızlı Okumayı Öğrenmeliyim?</a>
@@ -731,11 +693,7 @@
                       <span class="span">10 Nisan, 2024</span>
                     </li>
 
-                    <!-- <li class="card-meta-item">
-                      <ion-icon name="chatbubbles-outline" aria-hidden="true"></ion-icon>
 
-                      <span class="span">Com 09</span>
-                    </li> -->
 
                   </ul>
 
@@ -762,7 +720,6 @@
                     <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                   </a>
 
-                  <!-- <a href="#" class="card-subtitle">Online</a> -->
 
                   <h3 class="h3">
                     <a href="#" class="card-title">Hızlı Okumanın Üni. Sınavı Başarısına Katkıları Nelerdir?</a>
@@ -776,11 +733,7 @@
                       <span class="span">29 Mart, 2024</span>
                     </li>
 
-                    <!-- <li class="card-meta-item">
-                      <ion-icon name="chatbubbles-outline" aria-hidden="true"></ion-icon>
 
-                      <span class="span">Com 09</span>
-                    </li> -->
 
                   </ul>
 
@@ -807,7 +760,6 @@
                     <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                   </a>
 
-                  <!-- <a href="#" class="card-subtitle">Online</a> -->
 
                   <h3 class="h3">
                     <a href="#" class="card-title">Göz Egzersizlerinin Bana Nasıl Bir Faydası Olacak?</a>
@@ -821,11 +773,7 @@
                       <span class="span">23 Nisan, 2024</span>
                     </li>
 
-                    <!-- <li class="card-meta-item">
-                      <ion-icon name="chatbubbles-outline" aria-hidden="true"></ion-icon>
 
-                      <span class="span">Com 09</span>
-                    </li> -->
 
                   </ul>
 
@@ -838,7 +786,7 @@
               </div>
             </li>
 
-          </ul>
+          </ul> -->
 
           <img src="./assets/images/blog-shape.png" width="186" height="186" loading="lazy" alt=""
             class="shape blog-shape">
